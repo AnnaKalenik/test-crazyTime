@@ -3,7 +3,51 @@ $txt-dk: #004216;
 $txt-br: #653B04;
 $txt-br-sub: #654500;
 
-$bg-color: #465F00;
-$liner-gr: linear-gradient(180deg, #498103 0%, #A9E646 100%);
+$bg-body: #465F00;
+$lgr-head: linear-gradient(180deg, #498103 0%, #A9E646 100%);
 
+$bor-yel: #FFE26E;
+$bor-gr: #C1CEDE;
 
+$bg-choic: #F3FFD1F7;
+$bg-rcl: #4F6A0078;
+$bg-sldr: #A3B66B;
+
+$btn-grad:  linear-gradient(180deg, #DEFFC4 0%, #97FF45 100%);
+$btn-grad-border: #004216ad;
+$btn-grad-shad: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 25px #54D219, inset 0px -4px 10px #00B9F3, inset 0px 4px 10px #0EB500;
+$btn-wt: rgba(255, 255, 255, 0.3);
+$btn-grn: #678610;
+$btn-grn-border: #F3FFD1F7;
+$btn-grn-shad: 0px 0px 20px rgba(255, 255, 255, 0.25);
+$btn-brow-border: #C97C19;
+$btn-grad-bunner: linear-gradient(107.78deg, #5DE747 12.09%, #138900 85.51%);
+
+@mixin flex-container($dir: row, $jus: center, $ali: center) {
+    display: flex;
+    flex-direction: $dir;
+    justify-content: $jus;
+    align-items: $ali;
+}
+
+@mixin button-style($cl: $txt-dk, $fw: 700, $fs: 18px, $lh: 27px, $ls: -0.025em, $bor: none, $bck: $btn-grad, $bsh: $btn-grad-shad, $pd: 11.5px 32px) {
+    color: $cl;
+    font-weight: $fw;
+    font-size: $fs;
+    line-height: $lh;
+    letter-spacing: $ls;
+    text-transform: uppercase;
+    border: $bor;
+    background: $bck;
+    box-shadow: $bsh;
+    padding: $pd;
+}
+
+@mixin title($fs: 45px, $lh: 68px, $pd: 15px 0) {
+    font-weight: 700;
+    font-size: $fs;
+    line-height: $lh;
+    text-align: center;
+    letter-spacing: -0.02em;
+    padding: $pd;
+}

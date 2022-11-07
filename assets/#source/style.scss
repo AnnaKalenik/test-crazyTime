@@ -5,4 +5,154 @@
 @import'_global.scss';
 //-------
 
+.header {
+    background: $lgr-head;
+    padding: 7px 0;
+
+    &__container {
+        @include flex-container;
+    }
+
+    &__text {
+        text-transform: uppercase;
+        font-size: 18px;
+        line-height: 27px;
+        letter-spacing: -0.025em;
+        margin: 0 78px;
+    }
+
+    &__jackpot {
+        @include flex-container($ali: start);
+        border: 2px solid $bor-yel;
+        padding: 11px 32px 8px 32px;
+        margin-right: 78px;
+    }
+
+    &__amount {
+        text-transform: uppercase;
+        font-size: 18px;
+        line-height: 27px;
+        margin-left: 9px;
+    }
+}
+
+.promo {
+    &__wrapper {
+        background-image: url('./../images/image-promo.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    &__cover {
+        @include flex-container($dir: column);
+        width: 100%;
+        padding: 225px 0 149px 0;
+        background: rgba(35, 17, 17, 0.4);
+        backdrop-filter: blur(10px);
+    }
+
+    &__button {
+        width: 351px;
+        height: 77px;
+
+        &_white {
+            @include button-style($cl: $txt-wt, $bor: 2px solid $txt-wt, $bck: $btn-wt, $bsh: none);
+            margin-bottom: 24px;
+        }
+
+        &_green {
+            @include button-style($cl: $txt-wt, $bor: 2px solid $btn-grn-border, $bck: $btn-grn, $bsh: $btn-grn-shad);
+        }
+    }
+}
+
+.choices {
+
+    &__button {
+        display: block;
+        width: 351px;
+        height: 77px;
+        @include button-style($fs: 20px, $lh: 30px, $bor: 2px solid $btn-grad-border, $bsh: $btn-grad-shad);
+        margin: 34px auto 41px;
+    }
+
+    &__list {
+        @include flex-container($jus: space-between, $ali: flex-end);
+    }
+
+    &__item {
+        @include flex-container($dir: column);
+        background: $bg-choic;
+        padding: 24px 75px 19px;
+
+        &_big {
+            padding: 21px 74px 19px;
+        }
+    }
+
+    &__rectangle {
+        width: 191.84px;
+        height: 85.26px;
+        background-color: $bg-rcl;
+        margin-bottom: 10px !important;
+
+        &_big {
+            width: 203.83px;
+            height: 90.59px;
+            margin-bottom: 6px !important;
+        }
+    }
+
+    &__count {
+        font-size: 16px;
+        line-height: 24px;
+        color: $txt-br-sub;
+        margin-bottom: 4px;
+
+        &_big {
+            font-size: 18px ;
+            line-height: 27px;
+            margin-bottom: 6px !important;
+        }
+    }
+
+    &__stars {
+        margin-bottom: 16px;
+
+        &_big {
+            margin-bottom: 10px !important;
+        }
+    }
+
+    &__subtitle {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 18px;
+        color: $txt-dk;
+        text-align: center;
+        margin-bottom: 32px;
+
+        &_big {
+            font-size: 30px;
+            line-height: 32px;
+            margin-bottom: 23px !important;
+        }
+    }
+
+    &__button-item {
+        font-size: 16px;
+        line-height: 24px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 25px rgba(114, 255, 48, 0.49), inset 0px -4px 10px #00B9F3, inset 0px 4px 10px #0EB500;
+        padding: 13.3px 38.4px;
+
+        &_big {
+            font-size: 22px;
+            line-height: 33px;
+            border: 1px solid $btn-grad-border;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 25px #327612, inset 0px -4px 10px #00B9F3, inset 0px 4px 10px #0EB500;        
+            padding: 12.5px 46.5px;
+        }
+    }
+}
+
 
