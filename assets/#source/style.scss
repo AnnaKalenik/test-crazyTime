@@ -155,4 +155,183 @@
     }
 }
 
+.about {
+    display: grid;
+    grid-template-columns: 506px 635px;
+    grid-template-rows: 74px 467px 451px auto;
+    // grid-template-rows: 74px auto auto;
+    grid-template-areas:
+        "raiting raiting"
+        "offers review"
+        "data video"
+        "btn btn";
+    gap: 25px 30px;
+    margin-top: 25px;
+    
+    &__raiting {
+        grid-area: raiting;
+        @include flex-container;
+    }
+
+    &__text,
+    &__rank {
+        letter-spacing: 0.025em;
+    }
+
+    &__stars {
+        padding: 0 15px 0 22px;
+    }
+
+    &__offers {
+        grid-area: offers;
+        background-color: $bg-choic;
+        padding: 27px 25px;
+    }
+
+    &__border {
+        padding: 5px 19px;
+    }
+
+    &__title {
+        text-align: left;
+        font-size: 40px;
+        line-height: 60px;
+        color: $txt-dk;
+        padding: 0 0 23px;
+
+        &_white {
+            line-height: 43px;
+            letter-spacing: -0.02em;
+            color: $txt-wt;
+            padding: 0 0 15px;
+        }
+    }
+
+    &__list {
+        @include flex-container($dir: column);
+    }
+
+    &__item {
+        margin-bottom: 27px;
+    }
+
+    &__review {
+        grid-area: review;
+        padding: 37px 32px 37px 30px;
+    }
+
+    &__data {
+        grid-area: data;
+        padding: 26px 56px;
+    }
+
+    &__data-item {
+        @include flex-container($ali: flex-start);
+        margin-bottom: 10px;
+    }
+
+    &__name {
+        width: 45%;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    &__value {
+        width: 55%;
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    &__video-block {
+        grid-area: video;
+        @include flex-container($dir: column, $ali: fstretch);
+        background-color: $bg-choic;
+        padding: 20px 30px 60px;
+    }
+
+    &__wrapper {
+        position: relative;
+        margin-top: 20px;
+    }
+
+    &__video {
+        width: 100%;
+    }
+
+    &__btn-play {
+        position: absolute;
+        width: 154px;
+        height: 154px;
+        top: calc(50% - 77px);
+        left: calc(50% - 77px);
+        background-image: url('./../icons/video-button.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        cursor: pointer;
+    }
+
+    &__btn {
+        grid-area: btn;
+        display: inline-block;
+        width: 197px;
+        margin: 12px auto 0px;
+        font-size: 20px;
+        line-height: 30px;
+        letter-spacing: -0.025em;
+    }
+}
+
+.border {
+    border: 1px solid $bor-yel;
+}
+
+.paragraph {
+    font-size: 18px;
+    line-height: 25px;
+    margin-bottom: 20px;
+}
+
+.item {
+    @include flex-container;
+    
+    &__rectangle {
+        width: 81px;
+        height: 52px;
+        left: 179px;
+        background: $bg-rcl;
+    }
+
+    &__description {
+        margin: 0 30px -6px 22px;
+    }
+
+    &__subtitle {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 15px;
+        letter-spacing: -0.02em;
+        color: $txt-br;
+    }
+
+    &__count {
+        display: inline-block;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 14px;
+        color: $txt-br-sub;
+    }
+
+    &__stars {
+        display: inline-block;
+    }
+
+    &__button {
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.025em;
+        padding: 14px 29px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 25px rgba(114, 255, 48, 0.49), inset 0px -4px 10px #00B9F3, inset 0px 4px 10px #0EB500;
+    }
+}
 
