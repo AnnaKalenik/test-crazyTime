@@ -9,25 +9,128 @@ body {
     background: $bg-body;
 }
 
+.site {
+    position: relative;
+}
+
 .container {
     max-width: 1440px;
     margin: 0 auto;
     padding: 0 135px;
 
-    // @media (max-width: 1279px) {
-    //     padding: 0 30px;
-    // }
+    @media (max-width: 1439px) {
+        padding: 0 100px;
+    }
 
-    // @media (max-width: 767px) {
-    //     padding: 0 10px;
-    // }
+    @media (max-width: 1024px) {
+        padding: 0 50px;
+    }
+
+    @media (max-width: 767px) {
+        padding: 0 20px;
+    }
 }
-
 
 .button {
     @include button-style;
+    transition: all 0.3s ease-in;
+
+    &__big {
+        display: block;
+        font-size: 20px;
+        line-height: 30px;
+        border: 1px solid $btn-grad-border;
+        padding: 14.5px 47px;
+    }
+}
+
+.button:hover {
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.647);
 }
 
 .title {
     @include title;
+
+    @media (max-width: 542px) {
+        font-size: 35px;
+        line-height: 58px;
+    }
+}
+
+.border {
+    border: 1px solid $bor-yel;
+}
+
+.paragraph {
+    font-size: 18px;
+    line-height: 25px;
+    margin-bottom: 20px;
+}
+
+.title-2 {
+    @include title($fs: 40px, $lh: 60px);
+
+    @media (max-width: 542px) {
+        font-size: 28px;
+        line-height: 46px;
+    }
+}
+
+.title-3 {
+    @include title($fs: 35px, $lh: 52px, $pd: 10px 0 20px);
+
+    @media (max-width: 542px) {
+        font-size: 24px;
+        line-height: 35px;
+    }
+}
+
+.title-4 {
+    @include title($fs: 30px, $lh: 45px, $pd: 10px 0 20px);
+
+    @media (max-width: 542px) {
+        font-size: 20px;
+        line-height: 31px;
+    }
+}
+
+.btn-to-header {
+    display: block;
+    position: absolute;
+    bottom: 90px;
+    right: 13%;
+    width: 137px;
+    height: 137px;
+    background-image: url('./../icons/btn-to-header.svg');
+    background-size: contain;
+    transition: all 0.3s ease;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+
+    @media (max-width: 1724px) {
+        bottom: 90px;
+        right: 20px;
+    }
+
+    @media (max-width: 1400px) {
+        width: 107px;
+        height: 107px;
+        bottom: 100px;
+        right: 20px;
+    }
+
+    @media (max-width: 1024px) {
+        bottom: 30px;
+        right: 0px;
+    }
+
+    @media (max-width: 1024px) {
+        position: fixed;
+        width: 67px;
+        height: 67px;
+        right: 10px;
+        opacity: 0.8;
+    }
 }

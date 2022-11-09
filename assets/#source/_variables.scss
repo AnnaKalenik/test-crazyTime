@@ -1,4 +1,5 @@
 $txt-wt: #FFFFFF;
+$txt-bl: #231111;
 $txt-dk: #004216;
 $txt-br: #653B04;
 $txt-br-sub: #654500;
@@ -21,7 +22,9 @@ $btn-grn: #678610;
 $btn-grn-border: #F3FFD1F7;
 $btn-grn-shad: 0px 0px 20px rgba(255, 255, 255, 0.25);
 $btn-brow-border: #C97C19;
-$btn-grad-bunner: linear-gradient(107.78deg, #5DE747 12.09%, #138900 85.51%);
+$btn-bnr-grad: linear-gradient(107.78deg, #5DE747 12.09%, #138900 85.51%);
+$btn-bnr-shad: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
 
 @mixin flex-container($dir: row, $jus: center, $ali: center) {
     display: flex;
