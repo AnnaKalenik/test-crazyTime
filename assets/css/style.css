@@ -305,8 +305,6 @@ body {
 }
 @media (max-width: 1087px) {
   .header {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
     padding: 25px 0;
   }
 }
@@ -324,6 +322,8 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 @media (max-width: 1251px) {
   .header__container {
@@ -343,8 +343,6 @@ body {
 }
 @media (max-width: 1107px) {
   .header__container {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
     gap: 10px;
   }
 }
@@ -540,10 +538,10 @@ body {
       -ms-flex-align: center;
           align-items: center;
   background: rgba(243, 255, 209, 0.968627451);
-  padding: 24px 75px 19px;
+  padding: 24px 71px 19px;
 }
 .choices__item_big {
-  padding: 21px 74px 19px;
+  padding: 21px 71px 19px;
 }
 @media (max-width: 1338px) {
   .choices__item {
@@ -574,12 +572,12 @@ body {
   width: 191.84px;
   height: 85.26px;
   background-color: rgba(79, 106, 0, 0.4705882353);
-  margin-bottom: 10px !important;
+  margin-bottom: 10px;
 }
 .choices__rectangle_big {
   width: 203.83px;
   height: 90.59px;
-  margin-bottom: 6px !important;
+  margin-bottom: 6px;
 }
 .choices__img {
   width: 100%;
@@ -596,13 +594,13 @@ body {
 .choices__count_big {
   font-size: 18px;
   line-height: 27px;
-  margin-bottom: 6px !important;
+  margin-bottom: 6px;
 }
 .choices__stars {
   margin-bottom: 16px;
 }
 .choices__stars_big {
-  margin-bottom: 10px !important;
+  margin-bottom: 10px;
 }
 .choices__subtitle {
   font-weight: 600;
@@ -615,7 +613,7 @@ body {
 .choices__subtitle_big {
   font-size: 30px;
   line-height: 32px;
-  margin-bottom: 23px !important;
+  margin-bottom: 23px;
 }
 @media (max-width: 1080px) {
   .choices__subtitle_big {
@@ -641,27 +639,20 @@ body {
 
 .about {
   display: grid;
-  grid-template-columns: 506px 635px;
-  grid-template-rows: 74px 467px 451px auto;
+  grid-template-columns: 0.89fr 1.11fr;
+  grid-template-rows: auto;
   grid-template-areas: "raiting raiting" "offers review" "data video" "btn btn";
   gap: 25px 30px;
   margin-top: 25px;
 }
-@media (max-width: 1439px) {
-  .about {
-    grid-template-columns: 0.9fr 1.1fr;
-  }
-}
 @media (max-width: 1347px) {
   .about {
     grid-template-columns: 1fr;
-    grid-template-rows: 74px auto;
     grid-template-areas: "raiting" "offers" "review" "data" "video" "btn";
   }
 }
 @media (max-width: 562px) {
   .about {
-    grid-template-rows: auto;
     gap: 25px 0;
   }
 }
@@ -680,6 +671,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 23px 0 20px;
 }
 @media (max-width: 562px) {
   .about__raiting {
@@ -707,7 +699,21 @@ body {
   }
 }
 .about__border {
+  height: 100%;
   padding: 5px 19px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 @media (max-width: 542px) {
   .about__border {
@@ -735,6 +741,8 @@ body {
   }
 }
 .about__list {
+  height: 100%;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -750,7 +758,7 @@ body {
           align-items: center;
 }
 .about__item {
-  margin-bottom: 27px;
+  margin: 0 auto 27px;
 }
 .about__review {
   grid-area: review;
@@ -763,7 +771,7 @@ body {
 }
 .about__data {
   grid-area: data;
-  padding: 26px 56px;
+  padding: 26px 56px 26px;
 }
 @media (max-width: 542px) {
   .about__data {
@@ -784,6 +792,8 @@ body {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+}
+.about__data-item:not(:last-child) {
   margin-bottom: 10px;
 }
 .about__name {
@@ -813,7 +823,7 @@ body {
       -ms-flex-align: fstretch;
           align-items: fstretch;
   background-color: rgba(243, 255, 209, 0.968627451);
-  padding: 20px 30px 60px;
+  padding: 20px 30px 48px;
 }
 @media (max-width: 542px) {
   .about__video-block {

@@ -10,19 +10,18 @@
     padding: 7px 0;
 
     @media (max-width: 1087px) {
-        flex-wrap: wrap;
         padding: 25px 0;
     }
 
     &__container {
         @include flex-container;
+        flex-wrap: wrap;
 
         @media (max-width: 1251px) {
             @include flex-container($jus: space-around);
         }
 
         @media (max-width: 1107px) {
-            flex-wrap: wrap;
             gap: 10px;
         }
     }
@@ -131,10 +130,10 @@
     &__item {
         @include flex-container($dir: column);
         background: $bg-choic;
-        padding: 24px 75px 19px;
+        padding: 24px 71px 19px;
 
         &_big {
-            padding: 21px 74px 19px;
+            padding: 21px 71px 19px;
         }
 
         @media (max-width: 1338px) {
@@ -162,12 +161,12 @@
         width: 191.84px;
         height: 85.26px;
         background-color: $bg-rcl;
-        margin-bottom: 10px !important;
+        margin-bottom: 10px ;
 
         &_big {
             width: 203.83px;
             height: 90.59px;
-            margin-bottom: 6px !important;
+            margin-bottom: 6px;
         }
     }
 
@@ -186,7 +185,7 @@
         &_big {
             font-size: 18px ;
             line-height: 27px;
-            margin-bottom: 6px !important;
+            margin-bottom: 6px;
         }
     }
 
@@ -194,7 +193,7 @@
         margin-bottom: 16px;
 
         &_big {
-            margin-bottom: 10px !important;
+            margin-bottom: 10px;
         }
     }
 
@@ -209,7 +208,7 @@
         &_big {
             font-size: 30px;
             line-height: 32px;
-            margin-bottom: 23px !important;
+            margin-bottom: 23px;
 
             @media (max-width: 1080px) {
                 font-size: 25px;
@@ -236,8 +235,8 @@
 
 .about {
     display: grid;
-    grid-template-columns: 506px 635px;
-    grid-template-rows: 74px 467px 451px auto;
+    grid-template-columns: 0.89fr 1.11fr;;
+    grid-template-rows: auto;
     grid-template-areas:
         "raiting raiting"
         "offers review"
@@ -246,13 +245,8 @@
     gap: 25px 30px;
     margin-top: 25px;
 
-    @media (max-width: 1439px) {
-        grid-template-columns: 0.9fr 1.1fr;
-    }
-
     @media (max-width: 1347px) {
         grid-template-columns: 1fr;
-        grid-template-rows: 74px auto;
         grid-template-areas:
         "raiting"
         "offers"
@@ -263,13 +257,13 @@
     }
 
     @media (max-width: 562px) {
-        grid-template-rows: auto;
         gap: 25px 0;
     }
     
     &__raiting {
         grid-area: raiting;
         @include flex-container;
+        padding: 23px 0 20px;
 
         @media (max-width: 562px) {
             padding: 10px 0;
@@ -297,7 +291,9 @@
     }
 
     &__border {
+        height: 100%;
         padding: 5px 19px;
+        @include flex-container($dir: column, $ali: flex-start);
 
         @media (max-width: 542px) {
             padding: 5px 5px;
@@ -326,11 +322,13 @@
     }
 
     &__list {
+        height: 100%;
+        width: 100%;
         @include flex-container($dir: column);
     }
 
     &__item {
-        margin-bottom: 27px;
+        margin: 0 auto 27px;
     }
 
     &__review {
@@ -344,7 +342,7 @@
 
     &__data {
         grid-area: data;
-        padding: 26px 56px;
+        padding: 26px 56px 26px;
 
         @media (max-width: 542px) {
             padding: 15px 15px;
@@ -353,7 +351,10 @@
 
     &__data-item {
         @include flex-container($ali: flex-start);
-        margin-bottom: 10px;
+
+        &:not(:last-child) {
+            margin-bottom: 10px;
+        }
     }
 
     &__name {
@@ -373,7 +374,7 @@
         grid-area: video;
         @include flex-container($dir: column, $ali: fstretch);
         background-color: $bg-choic;
-        padding: 20px 30px 60px;
+        padding: 20px 30px 48px;
 
         @media (max-width: 542px) {
             padding: 15px 15px 30px;
