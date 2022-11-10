@@ -398,6 +398,10 @@
         &:hover {
             transform: scale(1.1);
         }
+
+        &_hidden {
+            display: none;
+        }
     }
 
     &__btn {
@@ -574,10 +578,6 @@
     overflow: hidden;
     margin: 0 auto;
 
-    // @media (max-width: 392px) {
-    //     padding: 10px 5px;
-    // }
-
     &__line {
         display: flex;
         flex-wrap: nowrap;
@@ -586,7 +586,6 @@
 
     &__slide {
         width: 100%;
-        // margin: 14px;
         text-align: center;
         border: none;
         cursor: pointer;
