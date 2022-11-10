@@ -171,6 +171,12 @@
         }
     }
 
+    &__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
     &__count {
         font-size: 16px;
         line-height: 24px;
@@ -425,7 +431,6 @@
     &__rectangle {
         width: 81px;
         height: 52px;
-        left: 179px;
         background: $bg-rcl;
 
         @media (max-width: 464px) {
@@ -441,6 +446,12 @@
         @media (max-width: 332px) {
             margin-bottom: 10px;
         }
+    }
+
+    &__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
 
     &__description {
@@ -761,7 +772,12 @@
     }
 
     &__button-right {
-        @include button-style($cl: $txt-br, $fs: 16px, $lh: 24px, $bor: 1px solid $btn-brow-border, $bck: none, $bsh: none, $pd: 13.5px 29px)
+        @include button-style($cl: $txt-br, $fs: 16px, $lh: 24px, $bor: 1px solid $btn-brow-border, $bck: none, $bsh: none, $pd: 13.5px 29px);
+        
+        &:hover {
+            color: $txt-wt;
+            background-color: $txt-br;
+        }
     }
 }
 

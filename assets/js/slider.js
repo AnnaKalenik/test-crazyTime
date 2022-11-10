@@ -5,6 +5,8 @@ export default function slider() {
     const btnPrev = document.querySelector('.btn-prev');
     const btnNext = document.querySelector('.btn-next');
 
+    let numSlides;
+    let valueMargin;
     let widthSliderWrap;
     let count = 0;
 

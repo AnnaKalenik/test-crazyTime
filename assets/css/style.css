@@ -135,6 +135,19 @@ body {
 }
 
 .button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   color: #004216;
   font-weight: 700;
   font-size: 18px;
@@ -148,6 +161,7 @@ body {
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 25px #54D219, inset 0px -4px 10px #00B9F3, inset 0px 4px 10px #0EB500;
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 25px #54D219, inset 0px -4px 10px #00B9F3, inset 0px 4px 10px #0EB500;
   padding: 11.5px 32px;
+  cursor: pointer;
   -webkit-transition: all 0.3s ease-in;
   -o-transition: all 0.3s ease-in;
   transition: all 0.3s ease-in;
@@ -567,6 +581,12 @@ body {
   height: 90.59px;
   margin-bottom: 6px !important;
 }
+.choices__img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 .choices__count {
   font-size: 16px;
   line-height: 24px;
@@ -887,7 +907,6 @@ body {
 .item__rectangle {
   width: 81px;
   height: 52px;
-  left: 179px;
   background: rgba(79, 106, 0, 0.4705882353);
 }
 @media (max-width: 464px) {
@@ -906,6 +925,12 @@ body {
   .item__rectangle {
     margin-bottom: 10px;
   }
+}
+.item__img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .item__description {
   margin: 0 30px -6px 22px;
@@ -1258,6 +1283,10 @@ body {
   -webkit-box-shadow: none;
           box-shadow: none;
   padding: 13.5px 29px;
+}
+.options__button-right:hover {
+  color: #FFFFFF;
+  background-color: #653B04;
 }
 
 .faq_wrapper {

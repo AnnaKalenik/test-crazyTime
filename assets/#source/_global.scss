@@ -32,7 +32,9 @@ body {
 }
 
 .button {
+    @include flex-container;
     @include button-style;
+    cursor: pointer;
     transition: all 0.3s ease-in;
 
     &__big {
